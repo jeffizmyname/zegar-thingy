@@ -10,52 +10,56 @@
             padding: 0;
             box-sizing: border-box;
             background-color: #171717;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
         #clock {
             position: relative;
-            /* display: flex;
-            flex-direction: column; */
             background-color: #d5d5d5;
             outline: 1px solid black;
             width: 500px;
             height: 500px;
         }
 
-        /* #clock::before {
-            content: "";
-            background-color: #171717;
-            width: 5px;
-            height: 5px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        } */
-
         #clock span {
             position: absolute;
             width: fit-content;
             display: flex;
         }
+
+        #form {
+            color: #d5d5d5;
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+        }
     </style>
 </head>
 <body>
     <div id="clock">
-        <span class="sec">0</span>
-        <span class="sec">0</span>
-        <span class="sec">0</span>
-        <span class="sec">0</span>
-
-        <span class="min">0</span>
-        <span class="min">0</span>
-        <span class="min">0</span>
-        <span class="min">0</span>
-
-        <span class="hour">0</span>
-        <span class="hour">0</span>
-        <span class="hour">0</span>
-        <span class="hour">0</span>
+    </div>
+    <div id="form">
+        <div>
+            <label for="secAmm">seconds ammount</label>
+            <input type="number" name="secAmm" id="secAmm" value=4>
+        </div>
+        <div>
+            <label for="secAmm">minutes ammount</label>
+            <input type="number" name="minAmm" id="minAmm" value=4>
+        </div>
+        <div>
+            <label for="secAmm">hours ammount</label>
+            <input type="number" name="hourAmm" id="hourAmm" value=4>
+        </div>
+        <div>
+            <label for="secAmm">padding</label>
+            <input type="number" name="padding" id="padding" value=20>
+        </div>
+        <div>
+            <label for="secAmm">radius</label>
+            <input type="number" name="radius" id="radius" value=100>
+        </div>
+        <button onclick="submitform()">Update</button>
     </div>
     <script src="program.js"></script>
 </body>
