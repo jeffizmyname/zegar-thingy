@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #171717;
+        }
+
+        #clock {
+            position: relative;
+            /* display: flex;
+            flex-direction: column; */
+            background-color: #d5d5d5;
+            outline: 1px solid black;
+            width: 500px;
+            height: 500px;
+        }
+
+        /* #clock::before {
+            content: "";
+            background-color: #171717;
+            width: 5px;
+            height: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        } */
+
+        #clock span {
+            position: absolute;
+            width: fit-content;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">
+        <span class="sec">0</span>
+        <span class="sec">0</span>
+        <span class="sec">0</span>
+        <span class="sec">0</span>
+
+        <span class="min">0</span>
+        <span class="min">0</span>
+        <span class="min">0</span>
+        <span class="min">0</span>
+
+        <span class="hour">0</span>
+        <span class="hour">0</span>
+        <span class="hour">0</span>
+        <span class="hour">0</span>
+    </div>
+    <script src="program.js"></script>
+</body>
+</html>
