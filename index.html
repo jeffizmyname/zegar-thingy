@@ -21,6 +21,31 @@
             height: 500px;
         }
 
+        #clock::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(-50%, -50%);
+            width: 5px;
+            height: 5px;
+            background-color: #171717;
+            border-radius: 50%;
+        }
+
+        #clock::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            width: 350px;
+            height: 350px;
+            border: 1px solid #171717;
+            background-color: transparent;
+            border-radius: 50%;
+        }
+
         #clock span {
             position: absolute;
             width: fit-content;
