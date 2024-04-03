@@ -8,8 +8,8 @@ minValues = null;
 hourValues = null;
 clock = document.getElementById("clock")
 numberOfPoints = 60
-centerX = 250
-centerY = 250
+centerX = 240
+centerY = 240
 r = 100
 x = 0
 y = 0
@@ -70,6 +70,7 @@ const runClock = () => {
             y = (centerY + tempR * Math.sin(secAngle));
             element.style.top = `${x}px`;
             element.style.left = `${y}px`;
+            element.style.transform = `rotate(${date.getSeconds()*6}deg)`  
             element.innerHTML = date.getSeconds()
             tempR+=padd
         })
@@ -81,6 +82,7 @@ const runClock = () => {
             y = (centerY + tempR * Math.sin(minAngle));
             element.style.top = `${x}px`;
             element.style.left = `${y}px`;
+            element.style.transform = `rotate(${date.getMinutes()*6}deg)`  
             element.innerHTML = date.getMinutes()
             tempR+=padd
         })
@@ -91,7 +93,8 @@ const runClock = () => {
             x = (centerX + tempR * Math.cos(hourAngle));
             y = (centerY + tempR * Math.sin(hourAngle));
             element.style.top = `${x}px`;
-            element.style.left = `${y}px`;
+            element.style.left = `${y}px`;            
+            element.style.transform = `rotate(${date.getHours()*6}deg)`  
             element.innerHTML = date.getHours()
             tempR+=padd
         })
